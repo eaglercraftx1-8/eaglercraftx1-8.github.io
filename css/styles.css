@@ -1,9 +1,8 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f1f1f1;
-    background-image: url("/images/snow1.jpg");
-    background-size: auto;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #001f3f, #005f7f);
+    color: #00ffff;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -11,51 +10,43 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
-    color: #333;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.dark-mode {
-    background-color: #141414;
-    color: #f1f1f1;
+    background: linear-gradient(135deg, #000814, #00334e);
+    color: #00e5ff;
 }
 
 header {
-    background-color: #8ffef8;
-    color: black;
+    background: linear-gradient(135deg, #004d40, #00796b);
+    color: #00ffcc;
     padding: 20px 0;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
 }
 
 header h1 {
     margin: 0;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00e5ff;
 }
 
 main {
     flex: 1;
     padding: 20px;
 }
+
 .darkmodediv {
-    padding-left: 480px;
-    padding-right: 480px;
-    background: grey;
-}
-
-.counter, .info, .clients, .danger-zone {
-    margin-bottom: 20px;
-}
-
-.Container18, .Container15, .ContainerOther {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
+    padding: 0 480px;
+    background: rgba(0, 102, 102, 0.8);
+    border-radius: 10px;
+    color: #e0f7fa;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
 }
 
 button, .source-btn, .dsc-btn, .clr-btn {
-    background-color: #0095ff;
-    color: white;
+    background: linear-gradient(135deg, #004d40, #00bfa5);
+    color: #ffffff;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -63,231 +54,78 @@ button, .source-btn, .dsc-btn, .clr-btn {
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.4);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
-.clientbutton button {
-    background-color: #0095ff;
-}
+
 button:hover {
-    transform: scale(1.05)
-}
-.clr-btn:hover {
-    background-color: #ff3c00;
+    background: linear-gradient(135deg, #00695c, #00e5ff);
+    box-shadow: 0 6px 12px rgba(0, 255, 255, 0.6);
     transform: scale(1.05);
 }
-.dsc-btn:hover {
-    background-color: #9656ce;
-    transform: scale(1.05);
-}
-.source-btn:hover {
-    background-color: #000;
-    transform: scale(1.05);
-}
-.source-btn {
-    background-color: #000; /* Black color for GitHub button */
+
+/* Specific Button Colors */
+.clr-btn {
+    background: linear-gradient(135deg, #d32f2f, #ff5252);
 }
 
 .dsc-btn {
-    background-color: #9656ce;
+    background: linear-gradient(135deg, #5e35b1, #7e57c2);
 }
 
-.clr-btn {
-    background-color: #ff3c00;
+.source-btn {
+    background: linear-gradient(135deg, #000000, #424242);
 }
 
-.search-container {
-    margin: 20px 0;
-}
-
+/* Input and Modal Styles */
 #search-bar {
-    padding: 10px;
-    border: 1px solid #ccc;
+    background: rgba(0, 51, 51, 0.8);
+    color: #e0f7fa;
+    border: 2px solid #00796b;
     border-radius: 4px;
+    padding: 10px;
     width: 50%;
     max-width: 400px;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #search-bar:focus {
-    border-color: #4caf50;
+    border-color: #00e5ff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
     outline: none;
 }
 
-.footer {
-    background-color: #32b3bb; /*Winter color for footer */
-    color: white; /* Light text color for footer */
-    padding: 10px;
-    text-align: center;
-    opacity: 0.9;
-}
-
-.footer a {
-    color: white; /* Light text color for footer links */
-    text-decoration: none;
-    margin: 0 10px;
-    opacity: 1;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-    opacity: 1;
-}
-
-.footer button {
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    opacity: 1;
-}
-
-.footer button.server-list {
-    background-color: #000; /* Black color for Server List button */
-    padding-bottom: 25px;
-    opacity: 1;
-}
-
-.footer button.server-list:hover {
-    background-color: #333; /* Slightly lighter shade for hover effect */
-    transform: scale(1.05);
-    opacity: 1;
-}
-
-.footer button.eaglerrinth-mod-list {
-    background-color: #9656ce; /* Same color as Discord link button */
-    padding-bottom: 25px;
-    opacity: 1;
-}
-
-.footer button.eaglerrinth-mod-list:hover {
-    background-color: #a751f2; /* Slightly lighter shade for hover effect */
-    transform: scale(1.05);
-    opacity: 1;
-}
-
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
 .modal-content {
-    background-color: white;
+    background: rgba(0, 32, 43, 0.9);
+    color: #00ffff;
     padding: 20px;
     border-radius: 10px;
-    width: 80%;
-    max-width: 400px;
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.modal h2 {
-    color: #333;
-}
-
-.modal p {
-    color: #555;
-    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
 }
 
 .modal button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    margin: 5px;
-}
-
-.modal button.cancel-btn {
-    background-color: #f44336;
+    background: linear-gradient(135deg, #004d40, #00bfa5);
 }
 
 .modal button:hover {
-    background-color: #45a049;
+    background: linear-gradient(135deg, #00796b, #00e5ff);
 }
 
-.modal button.cancel-btn:hover {
-    background-color: #e53935;
+.footer {
+    background: linear-gradient(135deg, #00251a, #004d40);
+    color: #e0f7fa;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.7);
 }
 
-.copy-link {
-    background-color: #f4f4f4;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 15px;
+.footer a {
+    color: #00ffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.copy-btn {
-    background-color: #9656ce;
-}
-
-.copy-btn:hover {
-    background-color: #5b209a;
-}
-
-/* Dark Mode Styles */
-body.dark-mode .modal-content {
-    background-color: #333;
-    color: #f1f1f1;
-}
-
-body.dark-mode .modal h2 {
-    color: #f1f1f1;
-}
-
-body.dark-mode .modal p {
-    color: #ccc;
-}
-
-body.dark-mode #search-bar {
-    background-color: #444;
-    color: #f1f1f1;
-    border-color: #555;
-}
-
-body.dark-mode #search-bar:focus {
-    border-color: #4caf50;
-}
-
-body.dark-mode .footer {
-    background-color: #444; /* Dark gray color for footer in dark mode */
-    color: white; /* Light text color for footer in dark mode */
-}
-
-body.dark-mode .footer a {
-    color: white; /* Light text color for footer links in dark mode */
-}
-
-body.dark-mode .footer button.server-list {
-    background-color: #000; /* Black color for Server List button in dark mode */
-}
-
-body.dark-mode .footer button.server-list:hover {
-    background-color: #333; /* Slightly lighter shade for hover effect in dark mode */
-}
-
-body.dark-mode .footer button.eaglerrinth-mod-list {
-    background-color: #9656ce; /* Same color as Discord link button in dark mode */
-}
-
-body.dark-mode .footer button.eaglerrinth-mod-list:hover {
-    background-color: #a751f2; /* Slightly lighter shade for hover effect in dark mode */
+.footer a:hover {
+    color: #00e5ff;
 }
