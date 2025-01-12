@@ -1,5 +1,10 @@
 # EaglerCraftX
-EaglerCraft Client Collections  
+
+<div style="background-image: url(./images/dirt-wallpaper.jpg);background-size:cover;background-repeat:no-repeat;filter:brightness(65%);border-radius:34px;width:calc(1400px/10px);height:calc(900px/10px);padding:200px;display:flex;justify-content:center;align-items:center;">
+    <img src="./images/eaglercommunity.png" style="box-shadow:1px 10px 15px #000">
+</div>
+
+## EaglerCraft Client Collections  
 **https://git.eaglercraft.win/EaglercraftX-Client-Collections/EaglercraftX-Site**  
 **https://www.eaglercraft.win**  
 

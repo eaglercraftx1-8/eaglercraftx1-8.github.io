@@ -17,7 +17,7 @@
 <script type="text/javascript" src="eagswebrtc.js"></script>
 <script src="/js/ga4.js"></script>
 <script type="text/javascript">
-if(document.location.href.startsWith("file:")) {
+if(location.protocol === "file:") {
 alert("You cannot 'open' this file in your browser, the code doesn't work. Upload this folder to your HTTP(s) server and access it via the internet to launch the stable-download game. This is not a bug, please read the documentation");
 }else {
 window.addEventListener("load", function(){
